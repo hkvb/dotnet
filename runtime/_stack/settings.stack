@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
 # START CONFIGURATION
-export VCW_STACK_GLOBAL_PACKAGE_CONTECO="hkvb/dotnetcore/runtime"
+export VCW_STACK_GLOBAL_PACKAGE_CONTECO="hkvb/dotnet/runtime"
 export VCW_STACK_GLOBAL_PACKAGE_TAG="3.1"
 export VCW_STACK_GLOBAL_STACKNAMES="vcw_stack_dotnetcore_runtime"
 export VCW_STACK_GLOBAL_BOOTSTACKS="vcw_stack_dotnetcore_runtime"
 export VCW_STACK_GLOBAL_RUNSTACKS=""
 export VCW_STACK_GLOBAL_VOLUME_LIST="${VCW_STACK_GLOBAL_STACKPREFIX}_dotnetcore_runtime_volume"
-export VCW_STACK_GLOBAL_VOLUME_INITIALISED=""
+export VCW_STACK_GLOBAL_VOLUME_INITIALISED="${VCW_STACK_GLOBAL_STACKPREFIX}_dotnetcore_runtime_volume:/app"
 # END CONFIGURATION
 
 # START MODULE SETTINGS
