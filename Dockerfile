@@ -1,17 +1,11 @@
-ARG  VCW_REALM=hkvb
-ARG  VCW_TAG=7.9.2
-ARG  VCW_TAG_BASH=5.0.18
-FROM ${VCW_REGISTRY}hkvb/bash.wrapper:$VCW_TAG_BASH
+FROM ${VCW_REGISTRY}hkvb/bash.wrapper:5.0.18
 
 COPY ./ /vcw/repo/
 
-ENV VCW_REALM=$VCW_REALM \
-    VCW_TAG=$VCW_TAG
-
 LABEL co.vcweb.schema-version="1.0" \
-      co.vcweb.label="${VCW_REALM}/dotnet Library" \
+      co.vcweb.label="hkvb/dotnet Library" \
       co.vcweb.description=".NET Core based image library for core vcwebco implementation." \
-      co.vcweb.realm="${VCW_REALM}" \
+      co.vcweb.realm="hkvb" \
       co.vcweb.image="dotnet" \
-      co.vcweb.tag="${VCW_TAG}" \
+      co.vcweb.tag="3.1" \
       co.vcweb.maintainer="infometis@vcweb.co"
