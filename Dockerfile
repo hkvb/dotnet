@@ -1,8 +1,12 @@
+ARG  VCW_REALM=hkvb
 ARG  VCW_TAG=7.9.2
 ARG  VCW_TAG_BASH=5.0.18
-FROM ${VCW_REGISTRY}hkvb/bash.wrapper:${VCW_TAG_BASH}
+FROM ${VCW_REGISTRY}hkvb/bash.wrapper:$VCW_TAG_BASH
 
 COPY ./ /vcw/repo/
+
+ENV VCW_REALM=$VCW_REALM \
+    VCW_TAG=$VCW_TAG
 
 LABEL co.vcweb.schema-version="1.0" \
       co.vcweb.label="${VCW_REALM}/dotnet Library" \
