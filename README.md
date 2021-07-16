@@ -2,14 +2,17 @@
 
 The .NET Core image library.
 
-## hkvb/dotnet
+## hkvb/dotnet/aspnet
 
-Simple library image.
+The .NET aspnet runtime.
 
 ## hkvb/dotnet/runtime
 
 The .NET core runtime.
 
-## version
 
-3.1
+## Version
+
+* 3.1
+* 5.0  
+* 5.0  
