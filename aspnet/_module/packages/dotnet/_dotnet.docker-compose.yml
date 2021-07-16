@@ -5,19 +5,19 @@ services:
 # START SERVICE hkvb/dotnet/aspnet
   dotnetcore:
     image: ${VCW_REGISTRY}mcr.microsoft.com/dotnet/aspnet:5.0
-    environment: [${VCW_STACK_DOTNET_ENVIRONMENT}]
-    command: [${VCW_STACK_DOTNET_COMMAND}]
+    environment: [${DOTNET_ENVIRONMENT}]
+    command: [${DOTNET_COMMAND}]
     volumes: ['${VCW_STACK_GLOBAL_STACKPREFIX}_volume:/app']
     ports: []
     networks: [${VCW_STACK_GLOBAL_NETWORKLOCAL}_overlay]
     deploy:
-      mode: ${VCW_STACK_DOTNET_DEPLOY_MODE}
+      mode: ${DOTNET_DEPLOY_MODE}
       resources:
         limits:
-          memory: '${VCW_STACK_DOTNET_DEPLOY_RESOURCES_LIMITS_MEMORY}'
+          memory: '${DOTNET_DEPLOY_RESOURCES_LIMITS_MEMORY}'
         reservations:
-          memory: '${VCW_STACK_DOTNET_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
-${VCW_STACK_DOTNET_COMPOSE_EXTENSIONS}
+          memory: '${DOTNET_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+${DOTNET_COMPOSE_EXTENSIONS}
 # END SERVICE hkvb/dotnet/aspnet
 
 networks: {${VCW_STACK_GLOBAL_NETWORKLOCAL}_overlay: { external: true }}
