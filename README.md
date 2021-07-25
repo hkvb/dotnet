@@ -10,7 +10,6 @@ The .NET aspnet runtime.
 
 The .NET core runtime.
 
-
 ## Version
 
 * 3.1
